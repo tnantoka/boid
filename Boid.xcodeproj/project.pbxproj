@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B8F629C19C775CF006F56BB /* fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9B8F629A19C775CF006F56BB /* fire.sks */; };
+		9B8F629D19C775CF006F56BB /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B8F629B19C775CF006F56BB /* spark.png */; };
 		9BBC54B219C5CED100AB83B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC54B119C5CED100AB83B3 /* AppDelegate.swift */; };
 		9BBC54B919C5CED100AB83B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BBC54B819C5CED100AB83B3 /* Images.xcassets */; };
 		9BBC54BC19C5CED100AB83B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BBC54BA19C5CED100AB83B3 /* LaunchScreen.xib */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B8F629A19C775CF006F56BB /* fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fire.sks; sourceTree = "<group>"; };
+		9B8F629B19C775CF006F56BB /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		9BBC54AC19C5CED100AB83B3 /* Boid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBC54B019C5CED100AB83B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BBC54B119C5CED100AB83B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 				9BBC550F19C69A1F00AB83B3 /* Cohesion.swift */,
 				9BBC551119C69A3100AB83B3 /* Separation.swift */,
 				9BBC551319C69A3A00AB83B3 /* Alignment.swift */,
+				9B8F629A19C775CF006F56BB /* fire.sks */,
+				9B8F629B19C775CF006F56BB /* spark.png */,
 			);
 			path = Boid;
 			sourceTree = "<group>";
@@ -211,7 +217,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BBC54BC19C5CED100AB83B3 /* LaunchScreen.xib in Resources */,
+				9B8F629D19C775CF006F56BB /* spark.png in Resources */,
 				9BBC54B919C5CED100AB83B3 /* Images.xcassets in Resources */,
+				9B8F629C19C775CF006F56BB /* fire.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +429,7 @@
 				9BBC54CD19C5CED100AB83B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BBC54CE19C5CED100AB83B3 /* Build configuration list for PBXNativeTarget "BoidTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +438,7 @@
 				9BBC54D019C5CED100AB83B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -24,7 +24,7 @@ class BoidScene: SKScene {
     
     func createSceneContents() {
         self.scaleMode = .AspectFit
-        self.backgroundColor = UIColor.whiteColor()
+        //self.backgroundColor = UIColor.whiteColor()
         
         let degree: Double = 360.0 / Double(numberOfBirds)
         let radius = 100.0
@@ -38,7 +38,7 @@ class BoidScene: SKScene {
             
             self.addChild(birdNode)
             self.birdNodes.append(birdNode)
-        }
+        }        
     }
     
     override func update(currentTime: NSTimeInterval) {

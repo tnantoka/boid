@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class BirdNode: SKShapeNode {
+class BirdNode: SKNode {
     let radius = 10.0
     let base = -50.0
 
@@ -21,6 +21,17 @@ class BirdNode: SKShapeNode {
     override init() {
         super.init()
         
+        self.rules = [
+            Cohesion(weight: 1.0),
+            Separation(weight: 0.8),
+            Alignment(weight: 0.1)
+        ]
+        
+        //self.addShapeNode()
+        self.addFireNode()
+    }
+    
+    func addShapeNode() {
         let path = CGPathCreateMutable()
         let degrees = [0.0, 130.0, 260.0]
         for degree in degrees {
@@ -32,14 +43,26 @@ class BirdNode: SKShapeNode {
             }
         }
         
-        self.path = path
-        self.fillColor = UIColor.blackColor()
+        let shapeNode = SKShapeNode(path: path)
+        shapeNode.fillColor = UIColor.whiteColor()
+        
+        self.addChild(shapeNode)
+    }
+    
+    func addFireNode() {
+        let fireNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource("fire", ofType: "sks")!) as SKEmitterNode
+        fireNode.particleScale = 0.1
+        fireNode.xScale = 0.7
+        fireNode.yScale = 0.9
+        
+        fireNode.particleLifetime = 0.3
+        fireNode.emissionAngle = -CGFloat(Utility.degreeToRadian(90.0))
+        fireNode.emissionAngleRange = 0.0
+        fireNode.particlePositionRange = CGVector(dx: 0.0, dy: 0.1)
 
-        self.rules = [
-            Cohesion(weight: 1.0),
-            Separation(weight: 0.8),
-            Alignment(weight: 0.1)
-        ]
+        fireNode.particleColor = UIColor.orangeColor()
+        
+        self.addChild(fireNode)
     }
 
     required init(coder aDecoder: NSCoder) {
