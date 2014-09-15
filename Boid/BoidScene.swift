@@ -16,18 +16,18 @@ class BoidScene: SKScene {
     var contentCreated = false
     
     override func didMoveToView(view: SKView) {
-        if !self.contentCreated {
-            self.createSceneContents()
-            self.contentCreated = true
-        }
+        self.scaleMode = .AspectFit
+        
+        //self.createSceneContents()
     }
     
     func createSceneContents() {
-        self.scaleMode = .AspectFit
-        //self.backgroundColor = UIColor.whiteColor()
-        
+        if self.contentCreated {
+            return
+        }
+
         let degree: Double = 360.0 / Double(numberOfBirds)
-        let radius = 100.0
+        let radius = 120.0
         for i in 0..<numberOfBirds {
             let birdNode = BirdNode()
             let degree = degree * Double(i)
@@ -38,12 +38,18 @@ class BoidScene: SKScene {
             
             self.addChild(birdNode)
             self.birdNodes.append(birdNode)
-        }        
+        }
+        
+        self.contentCreated = true
     }
     
     override func update(currentTime: NSTimeInterval) {
         for birdNode in birdNodes {
             birdNode.update(birdNodes: birdNodes, frame: self.frame)
         }
+    }
+    
+    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+        self.createSceneContents()
     }
 }
