@@ -21,6 +21,7 @@ class BoidViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         let skView = self.view as SKView
+        
         skView.showsFPS = true
         skView.showsNodeCount = true
         skView.showsDrawCount = true
@@ -31,7 +32,7 @@ class BoidViewController: UIViewController {
         skView.ignoresSiblingOrder = true
         
         let scene = BoidScene(size: CGSize(width: CGRectGetWidth(skView.bounds), height: CGRectGetWidth(skView.bounds)))
-        skView .presentScene(scene)
+        skView.presentScene(scene)
     }
 
     override func didReceiveMemoryWarning() {

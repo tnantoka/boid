@@ -26,13 +26,14 @@ class BoidScene: SKScene {
         self.scaleMode = .AspectFit
         self.backgroundColor = UIColor.whiteColor()
         
-        let degree: Double = 360.0 / Double(numberOfBirds);
+        let degree: Double = 360.0 / Double(numberOfBirds)
+        let radius = 100.0
         for i in 0..<numberOfBirds {
             let birdNode = BirdNode()
             let degree = degree * Double(i)
-            let radian = birdNode.degreeToRadian(degree)
-            let x = Double(CGRectGetMidX(self.frame)) + cos(radian) * 100.0
-            let y = Double(CGRectGetMidY(self.frame)) + sin(radian) * 100.0
+            let radian = Utility.degreeToRadian(degree)
+            let x = Double(CGRectGetMidX(self.frame)) + cos(radian) * radius
+            let y = Double(CGRectGetMidY(self.frame)) + sin(radian) * radius
             birdNode.position = CGPoint(x: x, y: y)
             
             self.addChild(birdNode)
