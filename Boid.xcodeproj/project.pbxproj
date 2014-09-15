@@ -13,6 +13,7 @@
 		9BBC54C819C5CED100AB83B3 /* BoidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC54C719C5CED100AB83B3 /* BoidTests.swift */; };
 		9BBC550419C5D78200AB83B3 /* BoidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC550319C5D78100AB83B3 /* BoidViewController.swift */; };
 		9BBC550619C5DAA100AB83B3 /* BoidScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC550519C5DAA100AB83B3 /* BoidScene.swift */; };
+		9BBC550819C5DD2D00AB83B3 /* BirdNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC550719C5DD2D00AB83B3 /* BirdNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		9BBC54C719C5CED100AB83B3 /* BoidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoidTests.swift; sourceTree = "<group>"; };
 		9BBC550319C5D78100AB83B3 /* BoidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoidViewController.swift; sourceTree = "<group>"; };
 		9BBC550519C5DAA100AB83B3 /* BoidScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoidScene.swift; sourceTree = "<group>"; };
+		9BBC550719C5DD2D00AB83B3 /* BirdNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				9BBC54AF19C5CED100AB83B3 /* Supporting Files */,
 				9BBC550319C5D78100AB83B3 /* BoidViewController.swift */,
 				9BBC550519C5DAA100AB83B3 /* BoidScene.swift */,
+				9BBC550719C5DD2D00AB83B3 /* BirdNode.swift */,
 			);
 			path = Boid;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BBC550819C5DD2D00AB83B3 /* BirdNode.swift in Sources */,
 				9BBC550419C5D78200AB83B3 /* BoidViewController.swift in Sources */,
 				9BBC550619C5DAA100AB83B3 /* BoidScene.swift in Sources */,
 				9BBC54B219C5CED100AB83B3 /* AppDelegate.swift in Sources */,
