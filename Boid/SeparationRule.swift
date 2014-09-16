@@ -1,5 +1,5 @@
 //
-//  Separation.swift
+//  SeparationRule.swift
 //  Boid
 //
 //  Created by Tatsuya Tobioka on 9/15/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Separation: Rule {
+class SeparationRule: Rule {
     let threshold = 30.0
     
     override func evaluate(#targetNode: BirdNode, birdNodes: [BirdNode]) {

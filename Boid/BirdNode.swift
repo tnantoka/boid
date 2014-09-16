@@ -12,7 +12,7 @@ class BirdNode: SKNode {
     let radius = 10.0
     let base = -50.0
 
-    let maxSpeed = CGFloat(4.0)
+    let maxSpeed: CGFloat = 4.0
     
     var velocity = CGPoint(x: 0.0, y: 0.0)
 
@@ -22,9 +22,9 @@ class BirdNode: SKNode {
         super.init()
         
         self.rules = [
-            Cohesion(weight: 1.0),
-            Separation(weight: 0.8),
-            Alignment(weight: 0.1)
+            CohesionRule(weight: 1.0),
+            SeparationRule(weight: 0.8),
+            AlignmentRule(weight: 0.1)
         ]
         
         //self.addShapeNode()

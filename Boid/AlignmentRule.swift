@@ -1,5 +1,5 @@
 //
-//  Alignment.swift
+//  AlignmentRule.swift
 //  Boid
 //
 //  Created by Tatsuya Tobioka on 9/15/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Alignment: Rule {
+class AlignmentRule: Rule {
     let factor: CGFloat = 2.0
     
     override func evaluate(#targetNode: BirdNode, birdNodes: [BirdNode]) {

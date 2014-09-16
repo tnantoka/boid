@@ -25,5 +25,4 @@ class Utility: NSObject {
         let y = radius * sin(radian)
         return CGPoint(x: x, y: y)
     }
-
 }

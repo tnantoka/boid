@@ -18,7 +18,7 @@ class BoidScene: SKScene {
     override func didMoveToView(view: SKView) {
         self.scaleMode = .AspectFit
         
-        //self.createSceneContents()
+        self.createSceneContents()
     }
     
     func createSceneContents() {
@@ -49,7 +49,7 @@ class BoidScene: SKScene {
         }
     }
     
-    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-        self.createSceneContents()
-    }
+//    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+//        self.createSceneContents()
+//    }
 }

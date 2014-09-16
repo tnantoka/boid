@@ -18,9 +18,9 @@
 		9BBC550819C5DD2D00AB83B3 /* BirdNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC550719C5DD2D00AB83B3 /* BirdNode.swift */; };
 		9BBC550A19C6963100AB83B3 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC550919C6963100AB83B3 /* Utility.swift */; };
 		9BBC550C19C697F000AB83B3 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC550B19C697F000AB83B3 /* Rule.swift */; };
-		9BBC551019C69A1F00AB83B3 /* Cohesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC550F19C69A1F00AB83B3 /* Cohesion.swift */; };
-		9BBC551219C69A3100AB83B3 /* Separation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC551119C69A3100AB83B3 /* Separation.swift */; };
-		9BBC551419C69A3A00AB83B3 /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC551319C69A3A00AB83B3 /* Alignment.swift */; };
+		9BBC551019C69A1F00AB83B3 /* CohesionRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC550F19C69A1F00AB83B3 /* CohesionRule.swift */; };
+		9BBC551219C69A3100AB83B3 /* SeparationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC551119C69A3100AB83B3 /* SeparationRule.swift */; };
+		9BBC551419C69A3A00AB83B3 /* AlignmentRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC551319C69A3A00AB83B3 /* AlignmentRule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,9 +49,9 @@
 		9BBC550719C5DD2D00AB83B3 /* BirdNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdNode.swift; sourceTree = "<group>"; };
 		9BBC550919C6963100AB83B3 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		9BBC550B19C697F000AB83B3 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
-		9BBC550F19C69A1F00AB83B3 /* Cohesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cohesion.swift; sourceTree = "<group>"; };
-		9BBC551119C69A3100AB83B3 /* Separation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Separation.swift; sourceTree = "<group>"; };
-		9BBC551319C69A3A00AB83B3 /* Alignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
+		9BBC550F19C69A1F00AB83B3 /* CohesionRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CohesionRule.swift; sourceTree = "<group>"; };
+		9BBC551119C69A3100AB83B3 /* SeparationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparationRule.swift; sourceTree = "<group>"; };
+		9BBC551319C69A3A00AB83B3 /* AlignmentRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignmentRule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +102,9 @@
 				9BBC550719C5DD2D00AB83B3 /* BirdNode.swift */,
 				9BBC550919C6963100AB83B3 /* Utility.swift */,
 				9BBC550B19C697F000AB83B3 /* Rule.swift */,
-				9BBC550F19C69A1F00AB83B3 /* Cohesion.swift */,
-				9BBC551119C69A3100AB83B3 /* Separation.swift */,
-				9BBC551319C69A3A00AB83B3 /* Alignment.swift */,
+				9BBC550F19C69A1F00AB83B3 /* CohesionRule.swift */,
+				9BBC551119C69A3100AB83B3 /* SeparationRule.swift */,
+				9BBC551319C69A3A00AB83B3 /* AlignmentRule.swift */,
 				9B8F629A19C775CF006F56BB /* fire.sks */,
 				9B8F629B19C775CF006F56BB /* spark.png */,
 			);
@@ -238,12 +238,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BBC550A19C6963100AB83B3 /* Utility.swift in Sources */,
-				9BBC551419C69A3A00AB83B3 /* Alignment.swift in Sources */,
-				9BBC551219C69A3100AB83B3 /* Separation.swift in Sources */,
+				9BBC551419C69A3A00AB83B3 /* AlignmentRule.swift in Sources */,
+				9BBC551219C69A3100AB83B3 /* SeparationRule.swift in Sources */,
 				9BBC550819C5DD2D00AB83B3 /* BirdNode.swift in Sources */,
 				9BBC550419C5D78200AB83B3 /* BoidViewController.swift in Sources */,
 				9BBC550C19C697F000AB83B3 /* Rule.swift in Sources */,
-				9BBC551019C69A1F00AB83B3 /* Cohesion.swift in Sources */,
+				9BBC551019C69A1F00AB83B3 /* CohesionRule.swift in Sources */,
 				9BBC550619C5DAA100AB83B3 /* BoidScene.swift in Sources */,
 				9BBC54B219C5CED100AB83B3 /* AppDelegate.swift in Sources */,
 			);

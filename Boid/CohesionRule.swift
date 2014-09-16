@@ -1,5 +1,5 @@
 //
-//  Cohesion.swift
+//  CohesionRule.swift
 //  Boid
 //
 //  Created by Tatsuya Tobioka on 9/15/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Cohesion: Rule {
+class CohesionRule: Rule {
     let factor: CGFloat = 300.0
     
     override func evaluate(#targetNode: BirdNode, birdNodes: [BirdNode]) {
