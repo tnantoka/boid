@@ -1,7 +1,7 @@
 Boid
 ====
 
-Boids with Sprite Kit written in Swift.
+[Boids](http://en.wikipedia.org/wiki/Boids) with Sprite Kit written in Swift.
 
 ![](boid.gif)
 
