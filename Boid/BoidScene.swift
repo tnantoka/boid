@@ -15,10 +15,14 @@ class BoidScene: SKScene {
     var birdNodes = [BirdNode]()
     var contentCreated = false
     
+    let startWithTouch = true
+    
     override func didMoveToView(view: SKView) {
         self.scaleMode = .AspectFit
-        
-        self.createSceneContents()
+
+        if !startWithTouch {
+            self.createSceneContents()
+        }
     }
     
     func createSceneContents() {
@@ -49,7 +53,7 @@ class BoidScene: SKScene {
         }
     }
     
-//    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-//        self.createSceneContents()
-//    }
+    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+        self.createSceneContents()
+    }
 }
