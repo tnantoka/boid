@@ -17,8 +17,8 @@ class SeparationRule: Rule {
         for birdNode in birdNodes {
             if birdNode != targetNode {
                 if Utility.distanceBetween(targetNode.position, birdNode.position) < self.threshold {
-                    velocity.x -= birdNode.position.x - targetNode.position.x
-                    velocity.y -= birdNode.position.y - targetNode.position.y
+                    self.velocity.x -= birdNode.position.x - targetNode.position.x
+                    self.velocity.y -= birdNode.position.y - targetNode.position.y
                 }
             }
         }

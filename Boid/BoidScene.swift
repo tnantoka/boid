@@ -30,9 +30,9 @@ class BoidScene: SKScene {
             return
         }
 
-        let degree: Double = 360.0 / Double(numberOfBirds)
+        let degree: Double = 360.0 / Double(self.numberOfBirds)
         let radius = 120.0
-        for i in 0..<numberOfBirds {
+        for i in 0..<self.numberOfBirds {
             let birdNode = BirdNode()
             let degree = degree * Double(i)
             let radian = Utility.degreeToRadian(degree)
@@ -48,8 +48,8 @@ class BoidScene: SKScene {
     }
     
     override func update(currentTime: NSTimeInterval) {
-        for birdNode in birdNodes {
-            birdNode.update(birdNodes: birdNodes, frame: self.frame)
+        for birdNode in self.birdNodes {
+            birdNode.update(birdNodes: self.birdNodes, frame: self.frame)
         }
     }
     

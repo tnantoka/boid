@@ -16,15 +16,15 @@ class CohesionRule: Rule {
         
         for birdNode in birdNodes {
             if birdNode != targetNode {
-                velocity.x += birdNode.position.x
-                velocity.y += birdNode.position.y
+                self.velocity.x += birdNode.position.x
+                self.velocity.y += birdNode.position.y
             }
         }
         
-        velocity.x /= CGFloat(birdNodes.count - 1)
-        velocity.y /= CGFloat(birdNodes.count - 1)
+        self.velocity.x /= CGFloat(birdNodes.count - 1)
+        self.velocity.y /= CGFloat(birdNodes.count - 1)
         
-        velocity.x = (velocity.x - targetNode.position.x) / self.factor
-        velocity.y = (velocity.y - targetNode.position.y) / self.factor
+        self.velocity.x = (self.velocity.x - targetNode.position.x) / self.factor
+        self.velocity.y = (self.velocity.y - targetNode.position.y) / self.factor
     }
 }

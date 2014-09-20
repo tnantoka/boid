@@ -70,7 +70,7 @@ class BirdNode: SKNode {
     }
 
     func update(#birdNodes: [BirdNode], frame: CGRect) {
-        for rule in rules {
+        for rule in self.rules {
             rule.evaluate(targetNode: self, birdNodes: birdNodes)
         }
         self.move(frame)
@@ -81,10 +81,10 @@ class BirdNode: SKNode {
         self.velocity.x += rules.reduce(0.0, combine: { sum, r in sum + r.weighted.x })
         self.velocity.y += rules.reduce(0.0, combine: { sum, r in sum + r.weighted.y })
 
-        let vector = sqrt(velocity.x * velocity.x + velocity.y * velocity.y)
+        let vector = sqrt(self.velocity.x * self.velocity.x + self.velocity.y * self.velocity.y)
         if (vector > self.maxSpeed) {
-            velocity.x = (velocity.x / vector) * self.maxSpeed
-            velocity.y = (velocity.y / vector) * self.maxSpeed
+            self.velocity.x = (self.velocity.x / vector) * self.maxSpeed
+            self.velocity.y = (self.velocity.y / vector) * self.maxSpeed
         }
         
         self.position.x += velocity.x
@@ -92,20 +92,20 @@ class BirdNode: SKNode {
         
         if (self.position.x - CGFloat(self.radius) <= 0) {
             self.position.x = CGFloat(self.radius)
-            velocity.x *= -1
+            self.velocity.x *= -1
         }
         if (self.position.x + CGFloat(self.radius) >= CGRectGetWidth(frame)) {
             self.position.x = CGRectGetWidth(frame) - CGFloat(self.radius)
-            velocity.x *= -1
+            self.velocity.x *= -1
         }
 
         if (self.position.y - CGFloat(self.radius) <= 0) {
             self.position.y = CGFloat(self.radius)
-            velocity.y *= -1
+            self.velocity.y *= -1
         }
         if (self.position.y + CGFloat(self.radius) >= CGRectGetHeight(frame)) {
             self.position.y = CGRectGetHeight(frame) - CGFloat(self.radius)
-            velocity.y *= -1
+            self.velocity.y *= -1
         }
     }
     

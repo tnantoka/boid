@@ -16,15 +16,15 @@ class AlignmentRule: Rule {
 
         for birdNode in birdNodes {
             if birdNode != targetNode {
-                velocity.x += birdNode.velocity.x
-                velocity.y += birdNode.velocity.y
+                self.velocity.x += birdNode.velocity.x
+                self.velocity.y += birdNode.velocity.y
             }
         }
         
-        velocity.x /= CGFloat(birdNodes.count - 1)
-        velocity.y /= CGFloat(birdNodes.count - 1)
+        self.velocity.x /= CGFloat(birdNodes.count - 1)
+        self.velocity.y /= CGFloat(birdNodes.count - 1)
         
-        velocity.x = (velocity.x - targetNode.velocity.x) / self.factor
-        velocity.y = (velocity.y - targetNode.velocity.y) / self.factor
+        self.velocity.x = (self.velocity.x - targetNode.velocity.x) / self.factor
+        self.velocity.y = (self.velocity.y - targetNode.velocity.y) / self.factor
     }
 }
