@@ -15,7 +15,7 @@ class BoidScene: SKScene {
     var birdNodes = [BirdNode]()
     var contentCreated = false
     
-    let startWithTouch = true
+    let startWithTouch = false
     
     override func didMoveToView(view: SKView) {
         self.scaleMode = .AspectFit
