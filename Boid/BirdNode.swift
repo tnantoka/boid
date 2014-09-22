@@ -44,7 +44,7 @@ class BirdNode: SKNode {
         }
         
         let shapeNode = SKShapeNode(path: path)
-        shapeNode.fillColor = UIColor.whiteColor()
+        shapeNode.fillColor = SKColor.whiteColor()
         
         self.addChild(shapeNode)
     }
@@ -60,7 +60,7 @@ class BirdNode: SKNode {
         fireNode.emissionAngleRange = 0.0
         fireNode.particlePositionRange = CGVector(dx: 0.0, dy: 0.1)
 
-        fireNode.particleColor = UIColor.orangeColor()
+        fireNode.particleColor = SKColor.orangeColor()
         
         self.addChild(fireNode)
     }
