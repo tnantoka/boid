@@ -11,7 +11,7 @@ import UIKit
 class CohesionRule: Rule {
     let factor: CGFloat = 300.0
     
-    override func evaluate(#targetNode: BirdNode, birdNodes: [BirdNode]) {
+    override func evaluate(targetNode targetNode: BirdNode, birdNodes: [BirdNode]) {
         super.evaluate(targetNode: targetNode, birdNodes: birdNodes)
         
         for birdNode in birdNodes {

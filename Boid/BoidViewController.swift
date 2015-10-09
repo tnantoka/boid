@@ -20,19 +20,19 @@ class BoidViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let skView = self.view as SKView
-        
-        skView.showsFPS = true
-        skView.showsNodeCount = true
-        skView.showsDrawCount = true
-        skView.showsPhysics = true
-        skView.showsFields = true
-        skView.showsQuadCount = true
-        
-        skView.ignoresSiblingOrder = true
-        
-        let scene = BoidScene(size: CGSize(width: CGRectGetWidth(skView.bounds), height: CGRectGetWidth(skView.bounds)))
-        skView.presentScene(scene)
+        if let skView = self.view as? SKView {
+            skView.showsFPS = true
+            skView.showsNodeCount = true
+            skView.showsDrawCount = true
+            skView.showsPhysics = true
+            skView.showsFields = true
+            skView.showsQuadCount = true
+
+            skView.ignoresSiblingOrder = true
+
+            let scene = BoidScene(size: CGSize(width: CGRectGetWidth(skView.bounds), height: CGRectGetWidth(skView.bounds)))
+            skView.presentScene(scene)
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -26,7 +26,7 @@ class Rule: NSObject {
         self.velocity = CGPoint(x: 0.0, y: 0.0)
     }
     
-    func evaluate(#targetNode: BirdNode, birdNodes: [BirdNode]) {
+    func evaluate(targetNode targetNode: BirdNode, birdNodes: [BirdNode]) {
         self.clear()
     }    
 }

@@ -16,21 +16,26 @@ class BirdNode: SKNode {
     
     var velocity = CGPoint(x: 0.0, y: 0.0)
 
-    let rules: [Rule]!
+    var rules: [Rule]!
     
     override init() {
+
         super.init()
-        
+
         self.rules = [
             CohesionRule(weight: 1.0),
             SeparationRule(weight: 0.8),
             AlignmentRule(weight: 0.1)
         ]
-        
+
         //self.addShapeNode()
         self.addFireNode()
     }
-    
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     func addShapeNode() {
         let path = CGPathCreateMutable()
         let degrees = [0.0, 130.0, 260.0]
@@ -50,7 +55,7 @@ class BirdNode: SKNode {
     }
     
     func addFireNode() {
-        let fireNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource("fire", ofType: "sks")!) as SKEmitterNode
+        guard let fireNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource("fire", ofType: "sks")!) as? SKEmitterNode else { return }
         fireNode.particleScale = 0.1
         fireNode.xScale = 0.7
         fireNode.yScale = 0.9
@@ -65,11 +70,7 @@ class BirdNode: SKNode {
         self.addChild(fireNode)
     }
 
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-
-    func update(#birdNodes: [BirdNode], frame: CGRect) {
+    func update(birdNodes birdNodes: [BirdNode], frame: CGRect) {
         for rule in self.rules {
             rule.evaluate(targetNode: self, birdNodes: birdNodes)
         }
@@ -110,7 +111,7 @@ class BirdNode: SKNode {
     }
     
     private func rotate() {
-        var radian = -atan2(Double(velocity.x), Double(velocity.y))
+        let radian = -atan2(Double(velocity.x), Double(velocity.y))
         self.zRotation = CGFloat(radian)
     }
 }

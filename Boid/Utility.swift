@@ -19,7 +19,7 @@ class Utility: NSObject {
         return sqrt(x * x  + y * y)
     }
 
-    class func rotatedPoint(#degree: Double, radius: Double, base: Double = 0.0) -> CGPoint {
+    class func rotatedPoint(degree degree: Double, radius: Double, base: Double = 0.0) -> CGPoint {
         let radian = Utility.degreeToRadian(degree + base)
         let x = radius * cos(radian)
         let y = radius * sin(radian)

@@ -52,8 +52,8 @@ class BoidScene: SKScene {
             birdNode.update(birdNodes: self.birdNodes, frame: self.frame)
         }
     }
-    
-    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.createSceneContents()
     }
 }
